@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context="com.nanaboison.signonline.MainActivity">
+
+    <TextView
+        android:id="@+id/tvsignbelow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Below"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/llsign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_sign_bord"
+        app:layout_constraintTop_toBottomOf="@id/tvsignbelow">
+        <com.nanaboison.signonline.SignatureView
+            android:id="@+id/imgsign"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/sign_here"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvclear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llsign" />
+
+    <LinearLayout
+        android:id="@+id/llbuttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        style="?android:attr/buttonBarStyle"
+        app:layout_constraintTop_toBottomOf="@id/tvclear">
+
+        <Button
+            android:id="@+id/btnpdf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_as_pdf"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/bg_sign_bord"/>
+
+        <Button
+            android:id="@+id/btnimage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save_as_image"
+            android:layout_marginLeft="10dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/bg_sign_bord"
+            android:textColor="@android:color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvclear" />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bannerad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        ads:layout_constrainedHeight="true"
+        android:layout_marginTop="20dp"
+        ads:layout_constraintTop_toBottomOf="@id/llbuttons"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:adSize="LARGE_BANNER"
+        android:visibility="visible"
+        ads:adUnitId="@string/banner_ad_id"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SignOnline</string>
+    <string name="sign_here">Sign Here</string>
+    <string name="clear">Clear</string>
+    <string name="save_as_image">Save As Image</string>
+    <string name="save_as_pdf">Save As PDF</string>
+
+    <string name="rationale_memory">This app needs to write to your memory in order to function</string>
+
+    <string name="prod_appId">ca-app-pub-3819427966464137~2064455828</string>
+    <string name="prod_banner_adID">ca-app-pub-3819427966464137/2535229110</string>
+    <string name="prod_fullscreen_adID">ca-app-pub-3819427966464137/2816917251</string>
+
+    <string name="test_appId">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="test_banner_adID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_fullscreen_adID">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string name="ad_appID">ca-app-pub-3819427966464137~2064455828</string>
+    <string name="banner_ad_id">ca-app-pub-3819427966464137/2535229110</string>
+    <string name="fullscreen_ad_id">ca-app-pub-3819427966464137/2816917251</string>
+</resources>

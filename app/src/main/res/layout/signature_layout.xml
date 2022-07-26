@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@android:color/white">
+
+    <com.nanaboison.signonline.SignatureView
+        android:id="@+id/signatureView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/rel"/>
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="Done"
+            android:background="@drawable/bg_sign_bord"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/done"
+            android:text="@string/clear"
+            android:background="@drawable/bg_sign_bord"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
